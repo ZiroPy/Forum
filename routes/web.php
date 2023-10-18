@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ReplyController;
+
 
 
 
@@ -27,4 +29,4 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\ForumController::class, 'index'])->name('index');
 Route::resource('forums', ForumController::class,);
 Route::resource('posts', PostController::class,);
-
+Route::resource('replies', ReplyController::class);
