@@ -35,4 +35,8 @@ class Reply extends Model
     public function gerForumAttribute(){
         return $this -> post -> forum;
     }
+
+    public function isAuthor(){
+        return $this ->user->id === auth()->id();
+    }
 }
