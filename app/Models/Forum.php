@@ -19,7 +19,8 @@ class Forum extends Model
     // Funcion para señalar los datos que son rellenables
     protected $fillable = [
         'name',
-        'description'
+        'description',
+        'slug'
     ];
 
     public function posts(): HasMany{
